@@ -4,6 +4,9 @@ pr: none
 schedules:
 - cron: '0 8 * * *'
   displayName: 'Daily greeting'
+  branches:
+    include:
+    - main
   always: true
 
 pool:
