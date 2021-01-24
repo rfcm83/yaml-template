@@ -9,4 +9,4 @@ steps:
         displayName: 'Hello ${{ person.name }} ${{ person.lastname }}'
         inputs:
           targetType: 'inline'
-          script: 'Write-Host "Hello ${{ person.name }} ${{ person.lastname }}!'
+          script: 'Write-Host "Hello ${{ person.name }} ${{ person.lastname }}!"'
