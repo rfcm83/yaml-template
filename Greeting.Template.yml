@@ -1,0 +1,12 @@
+parameters:
+  - name: 'persons'
+    type: object
+    default: {}
+
+steps:
+  - ${{ each person in parameters.persons }}:
+      - task: PowerShell@2
+        displayName: 'Hello ${{ person.name }} ${{ person.lastname }}'
+        inputs:
+          targetType: 'inline'
+          script: 'Write-Host "Hello ${{ person.name }} ${{ person.lastname }}!'
