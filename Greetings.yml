@@ -1,0 +1,37 @@
+trigger: none
+pr: none
+
+schedules:
+- cron: '0 8 * * *'
+  displayName: 'Daily greeting'
+  always: true
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: 'Greeting'
+  steps:
+  - template: Greeting.Template.yml
+    parameters:
+      persons:
+      - name: 'Juan'
+        lastname: 'García'
+      - name: 'José'
+        lastname: 'González'
+      - name: 'María'
+        lastname: 'Gutiérrez'
+      - name: 'Lucía'
+        lastname: 'Martínez'
+      - name: 'Antonio'
+        lastname: 'Martín'
+      - name: 'Luis'
+        lastname: 'Álvarez'
+      - name: 'Pedro'
+        lastname: 'López'
+      - name: 'Ana'
+        lastname: 'García'
+      - name: 'Francisco'
+        lastname: 'Rodríguez'
+      - name: 'Patricia'
+        lastname: 'Fernández'
